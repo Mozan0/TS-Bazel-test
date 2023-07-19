@@ -1,0 +1,14 @@
+load("@npm//@bazel/typescript:index.bzl", "ts_project")
+
+exports_files(["tsconfig.json"], visibility = ["//visibility:public"])
+
+ts_project(
+    name = "bazel-test",
+    srcs = glob(["*.ts"]),
+    deps = [
+      "@npm//@types/express",
+      "@npm//express",
+      
+      
+    ],
+)

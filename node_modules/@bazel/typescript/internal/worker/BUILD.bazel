@@ -1,0 +1,14 @@
+
+
+exports_files([
+    "index.js",
+])
+
+filegroup(
+    name = "filegroup",
+    srcs = [
+        "index.js",
+        "worker_adapter.js",
+    ],
+    visibility = ["//visibility:public"],
+)
